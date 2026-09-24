@@ -1,0 +1,1 @@
+Shows IPv4/IPv6, HTTP version, and proxy mode for the current tab's main document.

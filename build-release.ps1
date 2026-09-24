@@ -216,7 +216,7 @@ function Test-ExcludedPath([string]$RelativePath) {
   $blockedPrefixes = @(
     '.git/', '.github/', '.idea/', '.vscode/', '.cursor/',
     'node_modules/', 'dist/', 'tmp/', 'temp/', 'tests/', 'test/',
-    'screenshots/', 'docs/', 'development/', 'coverage/'
+    'screenshots/', 'docs/', 'development/', 'coverage/', 'store-assets/'
   )
   foreach ($prefix in $blockedPrefixes) {
     if ($p.StartsWith($prefix, [System.StringComparison]::OrdinalIgnoreCase)) {

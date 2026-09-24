@@ -172,6 +172,8 @@ The release build does **not** modify source files, commit, tag, or publish anyt
 
 For a quick local check, unpack the ZIP and use **Load unpacked** on the extracted folder.
 
+Store listing graphics and copy live in [`store-assets/`](store-assets/README-store-assets.md).
+
 ---
 
 ## How it works

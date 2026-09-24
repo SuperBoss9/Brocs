@@ -1,0 +1,12 @@
+webRequest
+Required to observe main-frame document requests and read the remote IP address and status that the browser reports for the page’s primary HTML document. Brocs does not block or modify requests.
+
+proxy
+Required to read the browser’s current proxy configuration (direct, fixed servers, PAC, system, or auto-detect). Brocs never changes proxy settings.
+
+storage
+Used only for temporary per-tab extension state so the toolbar icon and tooltip stay correct when the Manifest V3 service worker restarts. No browsing history is uploaded.
+
+http://*/*
+https://*/*
+Required so Brocs can show connection information for websites you open and so the content script can read the document’s nextHopProtocol from the Web Performance API. Brocs does not inject UI into pages or alter page content.

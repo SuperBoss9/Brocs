@@ -1,0 +1,9 @@
+Brocs works entirely on your device.
+
+• It does not send browsing history, URLs, hostnames, IP addresses, or proxy settings to any server.
+• It does not use analytics, advertising, or telemetry.
+• It does not call external “what is my IP” or geolocation services.
+• It does not change your proxy configuration (read-only).
+• Temporary connection state is kept only in the browser for the extension UI.
+
+No browsing or network information is transmitted anywhere.

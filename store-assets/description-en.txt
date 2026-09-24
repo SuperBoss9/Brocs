@@ -1,0 +1,25 @@
+Browser Connection Status (Brocs) shows how the current tab’s main document is connected — without leaving the browser or sending data anywhere.
+
+For each HTTP/HTTPS page, Brocs reports:
+
+• IP family: IPv4 or IPv6 (from the actual remote address of the main document)
+• HTTP version: HTTP/1.0, HTTP/1.1, HTTP/2, or HTTP/3 when the browser provides it
+• Proxy mode: direct, fixed proxy, or AUTO (PAC / system / auto-detect)
+• Extra detail on hover: host, remote IP, transport (QUIC for HTTP/3), status code, and cache hints when available
+
+Toolbar at a glance
+The extension button shows a short status such as 6H3 or 4H2 (IP family + HTTP). The icon background color reflects proxy mode (direct, fixed proxy, or auto). Hover the button for a per-tab tooltip with the full connection summary.
+
+Main document only
+Brocs analyzes the primary HTML document (main_frame), not images, scripts, iframes, or analytics requests. If the page is IPv6 + HTTP/3 but a subresource uses IPv4 + HTTP/2, Brocs correctly shows IPv6 / HTTP/3.
+
+Who it is for
+Developers, network engineers, and power users who work with dual-stack networks, HTTP/3, proxies, or VPN setups and want a quick, trustworthy view of what the browser actually used for the page.
+
+Privacy
+Brocs runs entirely locally. It does not call external APIs, does not use analytics or telemetry, and does not transmit browsing history, hostnames, IPs, or proxy settings.
+
+MVP limits
+Brocs does not perform DNS diagnostics, TLS certificate analysis, or public IP lookups. For PAC / system / auto-detect proxy modes it reports AUTO and does not guess the per-request proxy route — that information is not reliably available from browser APIs alone.
+
+Designed for Chromium-compatible browsers, including Chrome and Yandex Browser (Manifest V3).
