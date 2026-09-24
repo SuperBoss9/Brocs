@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Connection Status",
+  "short_name": "Brocs",
+  "version": "0.1.0",
+  "description": "Shows IPv4/IPv6, HTTP version, and proxy mode for the current tab's main document.",
+  "permissions": [
+    "webRequest",
+    "proxy",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "Brocs — Browser Connection Status",
+    "default_icon": {
+      "16": "icons/unknown-16.png",
+      "32": "icons/unknown-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/unknown-16.png",
+    "32": "icons/unknown-32.png",
+    "48": "icons/unknown-48.png",
+    "128": "icons/unknown-128.png"
+  }
+}

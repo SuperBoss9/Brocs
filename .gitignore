@@ -1,0 +1,13 @@
+# Build / IDE
+dist/
+node_modules/
+.idea/
+.vscode/
+.cursor/
+
+# OS / temp
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.bak
